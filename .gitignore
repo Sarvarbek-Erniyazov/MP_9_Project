@@ -1,0 +1,68 @@
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*.so
+
+# =====================
+# Virtual environments
+# =====================
+venv/
+venv312/
+.env
+
+# =====================
+# Jupyter
+# =====================
+.ipynb_checkpoints/
+
+# =====================
+# OS
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# Logs
+# =====================
+logs/
+*.log
+
+# =====================
+# Data (raw / temp)
+# =====================
+data/raw/
+data/interim/
+
+# ⚠️ processed faqat agar KATTA bo‘lsa ignore qil
+# data/processed/
+
+# =====================
+# Models
+# =====================
+# Barcha modelni ignore qilamiz
+*.pkl
+*.joblib
+
+# ❗️LEKIN final modelni ruxsat beramiz
+!models/
+!models/final_stacking_model.pkl
+
+# =====================
+# Docker
+# =====================
+__pycache__/
+*.pyc
+.dockerignore
+
+# =====================
+# IDE
+# =====================
+.vscode/
+.idea/
+
+# =====================
+# Test artifacts
+# =====================
+.pytest_cache/
