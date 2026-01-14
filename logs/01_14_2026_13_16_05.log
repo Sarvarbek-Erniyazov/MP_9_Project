@@ -1,0 +1,31 @@
+[ 2026-01-14 13:16:07,016 ] EnergyForecasting - INFO - --- INTEGRATSIYALASHGAN PIPELINE BOSHLANDI ---
+[ 2026-01-14 13:16:07,017 ] EnergyForecasting - INFO - 1-Bosqich: Data Ingestion boshlandi.
+[ 2026-01-14 13:16:07,478 ] EnergyForecasting - INFO - Fayllar yuklandi. Energy: (145366, 2), Temp: (45253, 37)
+[ 2026-01-14 13:16:07,650 ] EnergyForecasting - WARNING - Energy ma'lumotida 4 ta dublikat vaqt topildi va o'chirildi.
+[ 2026-01-14 13:16:07,688 ] EnergyForecasting - INFO - Energy ma'lumotidagi vaqt uzilishlari va dublikatlar to'g'rilandi.
+[ 2026-01-14 13:16:07,694 ] EnergyForecasting - INFO - Harorat ma'lumotidagi bo'shliqlar 'ffill' orqali to'ldirildi.
+[ 2026-01-14 13:16:07,732 ] EnergyForecasting - INFO - Ma'lumotlar 'inner join' qilindi. Jami qatorlar: 45253
+[ 2026-01-14 13:16:07,999 ] EnergyForecasting - INFO - Birlashtirilgan ma'lumot saqlandi: data/combined\combined_data.csv
+[ 2026-01-14 13:16:08,076 ] EnergyForecasting - INFO - 2-Bosqich: Feature Engineering boshlandi (Prefikslar bilan).
+[ 2026-01-14 13:16:08,143 ] EnergyForecasting - INFO - Yangi xususiyatlar yaratildi (FE_ prefiksi bilan). Jami ustunlar: 12
+[ 2026-01-14 13:16:08,156 ] EnergyForecasting - INFO - Data Split yakunlandi. Train: 37092, Test: 7993
+[ 2026-01-14 13:16:08,159 ] EnergyForecasting - INFO - Advanced Feature Selection jarayoni...
+[ 2026-01-14 13:16:13,145 ] EnergyForecasting - INFO - VIF tahlili boshlandi (Multicollinearity tekshiruvi).
+[ 2026-01-14 13:16:14,981 ] EnergyForecasting - INFO - Top 5 Feature: 
+FE_lag_24h             0.848026
+FE_lag_168h            0.546879
+FE_rolling_mean_24h    0.446690
+Temp_K                 0.371781
+FE_Temp_K_sq           0.371756
+Name: MI_Score, dtype: float64
+[ 2026-01-14 13:16:14,983 ] EnergyForecasting - INFO - Tanlangan xususiyatlar saqlandi: 11 ta
+[ 2026-01-14 13:16:16,205 ] EnergyForecasting - INFO - --- BASE MODEL TRAINING BOSHLANDI ---
+[ 2026-01-14 13:16:16,462 ] EnergyForecasting - INFO - XGBoost o'qitilmoqda...
+[ 2026-01-14 13:16:19,110 ] EnergyForecasting - INFO - LightGBM o'qitilmoqda...
+[ 2026-01-14 13:16:23,055 ] EnergyForecasting - INFO - RandomForest o'qitilmoqda...
+[ 2026-01-14 13:16:49,280 ] EnergyForecasting - INFO - --- RandomForest tuning boshlandi ---
+[ 2026-01-14 13:24:26,697 ] EnergyForecasting - INFO - --- XGBoost tuning boshlandi ---
+[ 2026-01-14 13:26:10,162 ] EnergyForecasting - INFO - --- LightGBM tuning boshlandi ---
+[ 2026-01-14 13:27:56,469 ] EnergyForecasting - INFO - Stacking Ensemble uchun bazaviy modellar yig'ilmoqda...
+[ 2026-01-14 13:27:56,470 ] EnergyForecasting - INFO - Kuchaytirilgan Stacking Ensemble o'qitilmoqda...
+[ 2026-01-14 13:30:24,040 ] EnergyForecasting - INFO - Model 'models/' papkasiga saqlandi.
