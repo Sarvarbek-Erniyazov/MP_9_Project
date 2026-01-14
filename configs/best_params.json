@@ -1,0 +1,16 @@
+{
+    "RandomForest": {
+        "n_estimators": 196,
+        "max_depth": 15
+    },
+    "XGBoost": {
+        "n_estimators": 797,
+        "max_depth": 5,
+        "learning_rate": 0.053245633671667174
+    },
+    "LightGBM": {
+        "n_estimators": 638,
+        "learning_rate": 0.04246741220930002,
+        "num_leaves": 44
+    }
+}

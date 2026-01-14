@@ -1,0 +1,43 @@
+{
+    "selected_features": [
+        "FE_lag_24h",
+        "FE_lag_168h",
+        "FE_rolling_mean_24h",
+        "Temp_K",
+        "FE_Temp_K_sq",
+        "FE_dayofyear",
+        "FE_hour",
+        "FE_month",
+        "FE_quarter",
+        "FE_dayofweek",
+        "FE_year"
+    ],
+    "vif_report": {
+        "feature": {
+            "0": "Temp_K",
+            "7": "FE_Temp_K_sq",
+            "5": "FE_year",
+            "3": "FE_month",
+            "6": "FE_dayofyear",
+            "10": "FE_rolling_mean_24h",
+            "8": "FE_lag_24h",
+            "4": "FE_quarter",
+            "9": "FE_lag_168h",
+            "1": "FE_hour",
+            "2": "FE_dayofweek"
+        },
+        "VIF": {
+            "0": 2640198.7138201934,
+            "7": 667755.8213937322,
+            "5": 662451.7159331219,
+            "3": 779.3172955474058,
+            "6": 622.5983451207455,
+            "10": 158.6263468063959,
+            "8": 135.73634596827972,
+            "4": 116.23262458137707,
+            "9": 62.866804857987304,
+            "1": 7.211253159911791,
+            "2": 3.7055584730709854
+        }
+    }
+}

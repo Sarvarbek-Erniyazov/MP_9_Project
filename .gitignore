@@ -1,0 +1,24 @@
+# Python vaqtinchalik fayllari
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Ma'lumotlar (Katta fayllarni GitHub-ga yuklamaymiz)
+data/raw/
+data/combined/
+data/processed/
+*.csv
+*.xlsx
+
+# Modellar va natijalar
+# Eslatma: Agar o'qitilgan modelni (pkl) GitHub-ga chiqarmoqchi bo'lsangiz, 
+# quyidagi models/ qatorini olib tashlang. Lekin AWS uchun bu kerak bo'lishi mumkin.
+# models/
+plots/
+logs/
+
+# IDE sozlamalari
+.vscode/
+.idea/
