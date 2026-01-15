@@ -31,8 +31,9 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
+          # Bu yerda username va loyiha nomini aniq yozdik, slesh xatosini yo'qotish uchun
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/mp_9_project:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/mp_9_project:${{ github.sha }}
+            shargun1303/mp_9_project:latest
+            shargun1303/mp_9_project:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
