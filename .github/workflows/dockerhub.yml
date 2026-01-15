@@ -9,25 +9,9 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
 
-    env:
-      IMAGE_NAME: mp_9_project
-      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Validate secrets
-        run: |
-          if [ -z "${DOCKERHUB_USERNAME}" ]; then
-            echo "ERROR: DOCKERHUB_USERNAME secret is missing/empty."
-            exit 1
-          fi
-          if [ -z "${{ secrets.DOCKERHUB_TOKEN }}" ]; then
-            echo "ERROR: DOCKERHUB_TOKEN secret is missing/empty."
-            exit 1
-          fi
-          echo "Secrets look OK."
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -48,7 +32,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/mp_9_project:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/mp_9_project:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
