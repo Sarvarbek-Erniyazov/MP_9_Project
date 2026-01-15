@@ -81,4 +81,4 @@ with gr.Blocks(title="Energy Forecasting Demo") as demo:
         btn2 = gr.Button("Predict from CSV row")
         btn2.click(from_csv, inputs=[file_in, row_in], outputs=out2)
 
-demo.launch(server_name="127.0.0.1", server_port=7860)
+demo.launch(server_name="0.0.0.0", server_port=7860)
